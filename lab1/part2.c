@@ -18,10 +18,13 @@ Port D, Pin 4 -> Input -> Right Whisker
 #include <util/delay.h>
 #include <stdio.h>
 
+#define MovFwd  0b10010000  // Move Forward
+#define MovBck  0b00000000  // Move Backward
+#define TurnR   0b10000000  // Turn Right
+#define TurnL   0b00010000  // Turn Left
+
 int main(void)
 {
-      PORTB = 0b11110000;    // set initial value for Port B outputs
-      PORTD = 0b00110000;
 
 while (1) // loop forever
       {
