@@ -154,7 +154,7 @@ HitRight:
 		; Move Backwards for a second
 		ldi		mpr, MovBck	; Load Move Backward command
 		out		PORTB, mpr	; Send command to port
-		ldi		waitcnt, WTime	; Wait for 1 second
+		ldi		waitcnt, WTime*2	; Wait for 2 seconds
 		rcall	Wait			; Call wait function
 
 		; Turn left for a second
@@ -187,7 +187,7 @@ HitLeft:
 		; Move Backwards for a second
 		ldi		mpr, MovBck	; Load Move Backward command
 		out		PORTB, mpr	; Send command to port
-		ldi		waitcnt, WTime	; Wait for 1 second
+		ldi		waitcnt, WTime*2	; Wait for 2 seconds
 		rcall	Wait			; Call wait function
 
 		; Turn right for a second
