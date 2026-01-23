@@ -35,7 +35,7 @@ int main(void)
 while (1) // loop forever
       {
       // Read and extract only 4th and 5th bits
-            unit8_t mpr = PIND & 0b00110000;
+            unint8_t mpr = PIND & 0b00110000;
 
             if (mpr == 0b00100000) { // right whisker is hit
                   PORTB = MovBck;     // move backward
